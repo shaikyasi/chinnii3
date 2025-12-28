@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yasir ❤️ Chinnii</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{color:white;}
+
+/* NAV BAR */
+nav{
+position:fixed;
+top:0;
+width:100%;
+padding:14px;
+background:rgba(0,0,0,0.6);
+text-align:center;
+z-index:99;
+}
+nav a{
+color:white;
+text-decoration:none;
+margin:10px;
+font-size:18px;
+}
+nav a:hover{color:#ff48aa;}
+
+/* PAGES COMMON */
+.page{
+display:none;
+width:100%;
+height:100vh;
+}
+
+/* ---------------- HOME PAGE ---------------- */
+#home{
+background:black;
+overflow:hidden;
+}
+
+.slider{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+}
+.slide{
+position:absolute;
+width:100%;
+height:100%;
+background-size:cover;
+background-position:center;
+opacity:0;
+transform:scale(1.1);
+animation:fade 20s infinite;
+}
+.slide:nth-child(1){background:url("chinnii1.jpeg");animation-delay:0s;}
+.slide:nth-child(2){background:url("chinnii2.jpeg");animation-delay:5s;}
+.slide:nth-child(3){background:url("chinnii3.jpeg");animation-delay:10s;}
+.slide:nth-child(4){background:url("chinnii4.jpeg");animation-delay:15s;}
+
+@keyframes fade{
+0%{opacity:0}
+10%{opacity:1;transform:scale(1)}
+35%{opacity:1}
+50%{opacity:0}
+100%{opacity:0}
+}
+
+.centerHome{
+position:absolute;
+bottom:12%;
+left:50%;
+transform:translateX(-50%);
+width:90%;
+text-align:center;
+}
+.centerHome h1{font-size:40px;text-shadow:0 0 30px black;}
+.centerHome p{font-size:22px;text-shadow:0 0 20px black;}
+.centerHome .proposal{color:#ffccff;font-weight:700;margin-top:10px;}
+
+/* ---------------- GALLERY PAGE ---------------- */
+#gallery{
+background:black;
+padding-top:80px;
+text-align:center;
+}
+.galleryBox{
+margin-top:30px;
+display:flex;
+flex-wrap:wrap;
+gap:20px;
+justify-content:center;
+padding-bottom:40px;
+}
+.galleryBox img{
+width:280px;
+height:380px;
+border-radius:20px;
+object-fit:cover;
+box-shadow:0 0 20px rgba(255,0,120,.6);
+transition:.4s;
+}
+.galleryBox img:hover{transform:scale(1.07);}
+
+/* ---------------- SPECIAL PAGE ---------------- */
+#love{
+background:linear-gradient(135deg,#ff0055,#ff66cc);
+text-align:center;
+padding-top:120px;
+}
+#love h1{font-size:40px;}
+#love p{
+font-size:22px;
+width:85%;
+margin:auto;
+margin-top:20px;
+}
+.specialLine{
+margin-top:25px;
+font-size:26px;
+font-weight:bold;
+color:yellow;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<a onclick="show('home')">Home</a>
+<a onclick="show('gallery')">Gallery</a>
+<a onclick="show('love')">Special</a>
+</nav>
+
+<!-- HOME -->
+<div class="page" id="home">
+<div class="slider">
+<div class="slide"></div>
+<div class="slide"></div>
+<div class="slide"></div>
+<div class="slide"></div>
+</div>
+
+<div class="centerHome">
+<h1>For My Beautiful Queen ❤️ Chinnii</h1>
+<p>From your Yasir… always with love 💕</p>
+<p class="proposal">I choose you. In every lifetime ❤️</p>
+</div>
+</div>
+
+<!-- GALLERY -->
+<div class="page" id="gallery">
+<h1>❤️ Beautiful Moments of Chinnii ❤️</h1>
+<div class="galleryBox">
+<img src="chinnii1.jpeg">
+<img src="chinnii2.jpeg">
+<img src="chinnii3.jpeg">
+<img src="chinnii4.jpeg">
+</div>
+</div>
+
+<!-- SPECIAL LOVE MESSAGE -->
+<div class="page" id="love">
+<h1>Dear Chinnii ❤️</h1>
+
+<p>
+You are the most special person in my world.
+Every smile of yours makes my heart happy.
+Every moment with you feels like magic.
+</p>
+
+<p class="specialLine">
+I choose you, in every lifetime ❤️
+</p>
+
+<p style="margin-top:20px;">
+Forever Yours,<br>
+<b>Yasir 💕</b>
+</p>
+</div>
+
+<script>
+function show(page){
+document.querySelectorAll(".page").forEach(p=>p.style.display="none");
+document.getElementById(page).style.display="block";
+}
+show('home');
+</script>
+
+</body>
+</html>
